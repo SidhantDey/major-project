@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WordGenie</title>
+    <link rel="icon" href="images/word-genie-logos_black.png" type="image/png">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="overlay">
+            <h1>WordGenie</h1>
+            <h3>Simple but powerful</h3>
+            <p>WordGenie uses powerful machine learning techniques to provide standard form of English </p>
+            <br>
+            <button type="button" onclick="openWin()">TRANSLATOR</button>
+           
+        </div>
+    </header>
+
+    <div class="mode">
+        
+    </div>
+
+    <textarea sapling-ignore="true" id="check-space" rows="10" cols="40" style="padding:20px">let get started!</textarea>
+    <p style="text-align:flex">© Copyright by BCA Department SITM</p>
+
+    <script src="https://sapling.ai/static/js/sapling-sdk-v1.0.5.min.js"></script>
+    <script type="text/javascript">
+        Sapling.init({
+            key: "0WKK8MYSF1WW0GP0A58HOB2FWS2Z7ANS",
+            mode: 'dev',
+            shadowRoot: false,
+        });
+
+        const contentEditable = document.getElementById('check-space');
+        Sapling.observe(contentEditable);
+
+        function openWin() {
+            window.open("Translator.html");
+        }
+    </script>
+</body>
+</html>
